@@ -1,0 +1,26 @@
+.app-container {
+  margin-top: 50px;
+  width: 1200px;
+}
+
+.row {
+  padding-bottom: 10px;
+}
+
+button {
+  background-color: #fbf4eb;
+  padding: 0px 10px;
+  height: 40px;
+  width: 100px;
+  margin-top: 10px;
+  color: #e89a32 !important;
+}
+
+.localization-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.localization-text-container {
+  margin-top: 10px;
+}

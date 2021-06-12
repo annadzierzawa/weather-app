@@ -1,0 +1,15 @@
+.days-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.day-container {
+  display: flex;
+  justify-content: center;
+}
+
+.chart-container {
+  height: 400px;
+  margin-top: 40px;
+}

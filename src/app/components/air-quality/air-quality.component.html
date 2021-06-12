@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-title>
+    <p>Dzisiejsza jakość powietrza:</p>
+  </mat-card-title>
+  <mat-card-content *ngIf="!!weather">
+    <div class="container">
+      <div class=row>
+        <div class="col-6">
+          <p>CO: {{weather.current.air_quality.co}} µg/m3 </p>
+          <p>NO<sub>2</sub>: {{weather.current.air_quality.no2}} µg/m3</p>
+          <p>O<sub>3</sub>: {{weather.current.air_quality.o3}} µg/m3 </p>
+        </div>
+        <div class="col-6">
+          <p>SO<sub>2</sub>: {{weather.current.air_quality.so2}} µg/m3 </p>
+          <p>PM2.5: {{weather.current.air_quality.pm2_5}} µg/m3</p>
+          <p>PM10: {{weather.current.air_quality.pm10}} µg/m3</p>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

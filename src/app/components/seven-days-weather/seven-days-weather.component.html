@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-card-title>
+    <p>Pogoda na następne dni:</p>
+  </mat-card-title>
+  <mat-card-content *ngIf="!!weatherObj">
+    <div class="container">
+      <div class=row>
+        <div class="days-container">
+          <div class="day-container"
+               *ngFor="let day of weatherObj.forecast.forecastday">
+            <div class="img-container">
+              <img [src]="day.day.condition.icon">
+              <p>Data: {{day.date}}</p>
+              <p>Temperatura maksymalna: {{day.day.maxtemp_c}} °C </p>
+              <p>Temperatura minimalna: {{day.day.mintemp_c}} °C</p>
+              <p>Wilgotność: {{day.day.avghumidity}} %</p>
+              <p>Wiatr: {{day.day.maxwind_kph}} km/h</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-9 chart-container">
+          <canvas baseChart
+                  [datasets]="weatherChartData"
+                  [labels]="weatherChartLabels"
+                  [options]="chartOptions"
+                  [colors]="chartColors"
+                  chartType="bar">
+          </canvas>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

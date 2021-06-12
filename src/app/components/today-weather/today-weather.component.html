@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-title>
+    <p>Pogoda na dziś:</p>
+  </mat-card-title>
+  <mat-card-content *ngIf="!!weather">
+    <div class="container">
+      <div class=row>
+        <div class="col-4 img-container">
+          <img [src]="weather.current.condition.icon">
+        </div>
+        <div class="col-8">
+          <p>Temperatura: {{weather.current.temp_c}} °C </p>
+          <p>Ciśnienie: {{weather.current.pressure_mb}} hPa</p>
+          <p>Wilgotność: {{weather.current.humidity}} %</p>
+          <p>Wiatr: {{weather.current.wind_kph}} km/h</p>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
